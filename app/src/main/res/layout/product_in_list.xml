@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:background="@drawable/shape_min_corners"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp">
+
+    <ImageView
+        android:id="@+id/product_view"
+        android:layout_width="match_parent"
+        android:layout_height="207dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/chicken_and_broccoli" />
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_rounded_variants"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:padding="5dp"
+        />
+</LinearLayout>

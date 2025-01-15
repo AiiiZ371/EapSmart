@@ -2,31 +2,30 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/calculator"
-    android:background="@drawable/image_3">
-
+    android:background="@drawable/image_3"
+    tools:context=".Activity_Recipes">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
-        android:background="@drawable/shape_plantoday"
-        android:orientation="vertical"
+        android:background="@drawable/shape_min_corners"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textcalculator"
+            android:id="@+id/textproducts"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="36dp"
             android:background="@drawable/shape_rounded_variants"
             android:gravity="center"
-            android:text="Калькулятор калорий"
+            android:text="Рецепты и продукты"
             android:textSize="20sp"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,32 +37,32 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="50dp"
             android:orientation="horizontal"
             android:weightSum="100"
-            android:layout_marginTop="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textcalculator">
+            app:layout_constraintTop_toBottomOf="@+id/textproducts">
 
             <android.widget.Button
-                android:id="@+id/btncardio"
+                android:id="@+id/btnfats"
                 style="@style/ButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
                 android:layout_weight="50"
                 android:background="@drawable/shape_rounded_variants"
-                android:text="Кардио" />
+                android:text="Жиры" />
 
             <android.widget.Button
-                android:id="@+id/btnpilates"
+                android:id="@+id/btnproteins"
                 style="@style/ButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
                 android:layout_weight="50"
                 android:background="@drawable/shape_rounded_variants"
-                android:text="Пилатес" />
+                android:text="Белки" />
         </LinearLayout>
 
         <LinearLayout
@@ -79,24 +78,24 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
             <android.widget.Button
-                android:id="@+id/btnstrenght"
+                android:id="@+id/btncarbohydrates"
                 style="@style/ButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
                 android:layout_weight="50"
                 android:background="@drawable/shape_rounded_variants"
-                android:text="Силовые" />
+                android:text="Углеводы" />
 
             <android.widget.Button
-                android:id="@+id/btnyoga"
+                android:id="@+id/btnvitamins"
                 style="@style/ButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
                 android:layout_weight="50"
                 android:background="@drawable/shape_rounded_variants"
-                android:text="Йога" />
+                android:text="Витамины" />
         </LinearLayout>
 
         <LinearLayout
@@ -105,78 +104,58 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="28dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:weightSum="100"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
             <android.widget.Button
-                android:id="@+id/btndance"
+                android:id="@+id/btnminerals"
                 style="@style/ButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="10dp"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="50"
-                android:background="@drawable/shape_rounded_variants"
-                android:text="Танцы" />
-
-            <android.widget.Button
-                android:id="@+id/btnaerobics"
-                style="@style/ButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
-                android:layout_weight="50"
                 android:background="@drawable/shape_rounded_variants"
-                android:text="Аэробика" />
+                android:text="Минералы" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView4"
+        <LinearLayout
+            android:id="@+id/recipeslist"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="28dp"
-            android:background="@drawable/shape_rounded_variants"
-            android:gravity="center"
-            android:text="Планируемые затраты калорий"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
-
-        <EditText
-            android:id="@+id/editcalories"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
+            android:layout_height="450dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/shape_rounded_variants"
-            android:ems="10"
-            android:gravity="center"
-            android:inputType="number"
-            android:hint="Калории"
-            android:textColor="#CCCC"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/shape_rounded_variants"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                />
+
+        </LinearLayout>
 
         <android.widget.Button
-            android:id="@+id/btncreateplan"
-            android:layout_width="150dp"
+            android:id="@+id/btnaddrecipes"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/shape_rounded_variants"
-            android:backgroundTint="@color/white"
-            android:gravity="center"
-            android:text="Создать план"
+            android:text="Добавить рецепт"
             android:textAllCaps="false"
-            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editcalories" />
+            app:layout_constraintTop_toBottomOf="@+id/recipeslist" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

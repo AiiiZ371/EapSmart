@@ -37,4 +37,5 @@ class DataBaseEatSmart(val context: Context, val factory: SQLiteDatabase.CursorF
         return result.moveToFirst()
     }
 
+
 }

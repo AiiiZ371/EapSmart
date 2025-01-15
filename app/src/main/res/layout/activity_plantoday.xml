@@ -18,13 +18,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/datetoday"
             android:layout_width="180dp"
             android:layout_height="50dp"
-            android:text="Plan_on_day"
+            android:text="План на 16.01.2025"
             android:layout_marginTop="50dp"
             android:gravity="center"
             android:layout_gravity="center_horizontal"
-            android:textSize="25sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
             android:background="@drawable/shape_rounded_variants"
             />
         <LinearLayout
@@ -36,39 +38,67 @@
             android:layout_gravity="center">
 
             <TextView
+                android:id="@+id/needcalories"
                 android:layout_width="240dp"
-                android:layout_height="150dp"
-                android:text="Need_calories:"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="20sp"
-                android:layout_marginTop="20dp"/>
-
-            <TextView
-                android:layout_width="240dp"
-                android:layout_height="150dp"
-                android:text="Need_you:"
-                android:layout_gravity="center"
-                android:textSize="20sp"
                 android:layout_marginTop="20dp"
-                />
+                android:textColor="@color/black"
+                android:text="Необходимо калорий:"
+                android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/calories"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="2500"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/needorganism"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Организму не хватает:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/vitaminfororganism"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/recomended"
                 android:layout_width="240dp"
                 android:layout_height="60dp"
-                android:text="Recomended_products_and_recipes:"
+                android:text="Рекомендованные продукты и рецепты:"
                 android:layout_gravity="center"
                 android:gravity="center_horizontal"
                 android:textSize="20sp"
+                android:textColor="@color/black"
                 android:layout_marginTop="20dp"/>
 
-                <ImageView
-                    android:layout_width="240dp"
-                    android:layout_height="240dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    />
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productList"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
                 />
+
         </LinearLayout>
     </LinearLayout>
 

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
 
     <application
@@ -13,22 +15,28 @@
         android:roundIcon="@mipmap/eatsmart_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EapSmartApp"
-        tools:targetApi="31" >
+        tools:targetApi="31">
         <activity
-            android:name=".SecondActivity"
+            android:name=".Activity_Add_Recipes"
             android:exported="false" />
         <activity
-            android:name=".ThirdActivity"
+            android:name=".Activity_Recipes"
             android:exported="false" />
         <activity
-            android:name=".FourActivity"
+            android:name=".Activity_Profile"
             android:exported="false" />
         <activity
-            android:name=".FiveActivity"
+            android:name=".Activity_Register"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true" >
+            android:name=".Activity_PlanToDay"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Calculator"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Login"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

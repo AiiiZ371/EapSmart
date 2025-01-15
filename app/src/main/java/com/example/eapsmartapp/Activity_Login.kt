@@ -1,6 +1,5 @@
 package com.example.eapsmartapp
 
-import android.content.Context
 import android.os.Bundle
 import android.content.Intent
 import android.graphics.Color
@@ -10,12 +9,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.eapsmartapp.databinding.ActivityLoginBinding
 
-class MainActivity : AppCompatActivity() {
+class Activity_Login : AppCompatActivity() {
 
     private lateinit var binding:ActivityLoginBinding
 
@@ -62,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                 val db = DataBaseEatSmart(this, null)
                 val isEnter = db.getUser(loginEnter, passwordEnter)
                 if (isEnter) {
-                    val intent = Intent(this, SecondActivity::class.java)
+                    val intent = Intent(this, Activity_Profile::class.java)
                     startActivity(intent)
                     userLoginEnter.text.clear()
                     userPasswordEnter.text.clear()
@@ -70,13 +66,11 @@ class MainActivity : AppCompatActivity() {
                 else{
                     Toast.makeText(this, "Пользователь не найден или не авторизован", Toast.LENGTH_LONG).show()
                 }
-
             }
-
         }
 
         buttonRegister.setOnClickListener {
-            val intent = Intent(this, ThirdActivity::class.java)
+            val intent = Intent(this, Activity_Register::class.java)
             startActivity(intent)
         }
     }

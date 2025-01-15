@@ -1,29 +1,21 @@
 package com.example.eapsmartapp
 
-import android.content.Context
 import android.os.Bundle
-import android.content.Intent
 import android.graphics.Color
 import android.text.Editable
-import android.text.InputFilter
 import android.text.TextWatcher
-import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.eapsmartapp.databinding.LayoutRegisterBinding
-import java.util.Locale
+import com.example.eapsmartapp.databinding.ActivityRegisterBinding
 
-class ThirdActivity : AppCompatActivity() {
-    private lateinit var binding: LayoutRegisterBinding
+class Activity_Register : AppCompatActivity() {
+    private lateinit var binding: ActivityRegisterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = LayoutRegisterBinding.inflate(layoutInflater)
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val userName: EditText = findViewById(R.id.etName)
